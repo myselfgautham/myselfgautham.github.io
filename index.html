@@ -65,7 +65,7 @@
             display: flex;
             align-items: center;
             justify-content: space-between;
-            padding: 0.5rem 1rem;
+            padding: 0 4px 0 4px;
             background-color: var(--backgroundBody);
         }
         .theme-toggle {
@@ -86,13 +86,13 @@
             border: 0;
         }
         .main-content {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
             display: flex;
-            align-items: center;
-            justify-content: center;
             flex-direction: column;
-            width: 100%;
-            height: calc(100vh - 60px); /* Subtracting header height */
-            text-align: center;
+            align-items: center;
         }
         .under-construction-icon {
             height: 96px;
@@ -102,6 +102,10 @@
         .title {
             color: var(--textColor);
             font-size: 1.5rem; /* 2xl */
+            font-family: sans-serif;
+            font-weight: 500;
+            letter-spacing: 0.04rem;
+            text-align: center;
         }
         @media (min-width: 768px) {
             .title {
@@ -122,6 +126,7 @@
             src="./Assets/Favicon.png"
             alt="Man Technologist Icon"
             height="48" width="48"
+            title="Gautham Krishna Vinayachandran"
         >
         <div class="theme-toggle theme-toggle--toggled" id="themeSwitch" onclick="toggleTheme()" title="Dark Mode">
             <span class="theme-toggle-sr">Toggle Theme</span>
